@@ -31,7 +31,7 @@
 							<p class="textoNormal1">Nombre:</p>
 						</td>
 						<td width="70%">
-							<input type="text" name="nombre" placeholder="Nombre" class="cajasRegistro">
+							<input type="text" name="nombre" placeholder="Nombre" class="cajasRegistro" required="true">
 						</td>
 					</tr>
 
@@ -40,7 +40,7 @@
 							<p class="textoNormal1">Edad:</p>
 						</td>
 						<td width="70%">
-							<input type="number" name="edad" placeholder="Edad" class="cajasRegistro">
+							<input type="number" name="edad" placeholder="Edad" class="cajasRegistro" required="true">
 						</td>
 					</tr>
 
@@ -49,7 +49,7 @@
 							<p class="textoNormal1">Tipo de documento:</p>
 						</td>
 						<td width="70%">
-							<select name="tipodocumento" class="cajasRegistro" form="formularioGen">
+							<select name="tipodocumento" class="cajasRegistro" form="formularioGen" required="true">
 								<option value="cedula" class="cajasRegistro">Cedula de ciudadania</option>
 								<option value="tarjeta" class="cajasRegistro">Tarjeta de identidad</option>
 								<option value="extranjera" class="cajasRegistro">Cedula de extranjeria</option>
@@ -63,7 +63,6 @@
 							<p class="textoNormal1">Cuentanos tu experiencia en la empresa:</p>
 						</td>
 						<td width="70%">
-							
 							<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 							<script>tinymce.init({ selector:'textarea' });</script>
 							<textarea></textarea>
@@ -77,7 +76,7 @@
 							<p class="textoNormal1">Lugar de Nacimiento:</p>
 						</td>
 						<td width="70%">
-							<select name="pais" class="cajasRegistro">
+							<select name="pais" class="cajasRegistro" required="true">
 								<option value="Elegir" id="AF">Elegir opción</option>
 								<option value="Afganistán" id="AF">Afganistán</option>
 								<option value="Albania" id="AL">Albania</option>
@@ -325,7 +324,7 @@
 							<p class="textoNormal1">Sexo:</p>
 						</td>
 						<td width="70%">
-							<select name="tipogenero" class="cajasRegistro" form="formularioGen">
+							<select name="tipogenero" class="cajasRegistro" form="formularioGen" required="true">
 								<option value="masculino" class="cajasRegistro">Masculino</option>
 								<option value="femenino" class="cajasRegistro">Femenino</option>
 							</select>
@@ -337,95 +336,19 @@
 							<p class="textoNormal1">Foto de perfil:</p>
 						</td>
 						<td width="70%">
-							<input type="file" name="foto" accept=".jpg,.pngm,.bmpm,.jpeg" class="cajasRegistro">
+							<input type="file" name="foto" accept=".jpg,.pngm,.bmpm,.jpeg" class="cajasRegistro" required="true">
 						</td>
 					</tr>
+
+					
 
 					<tr width="100%" align="center">
-						<td width="30%">	
-							<p class="textoNormal1">Fecha de ingreso a la empresa:</p>
-						</td>
-						<td width="70%">
-						<?php
-								require $KoolControlsFolder."/KoolCalendar/koolcalendar.php";
-								require $KoolControlsFolder."/KoolAjax/koolajax.php";
-								$koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
-							 
-							 
-								$cal = new KoolCalendar("cal"); //Create calendar object
-								$cal->scriptFolder = $KoolControlsFolder."/KoolCalendar";//Set scriptFolder
-								$cal->styleFolder="default";
-							 
-								//Enable Ajax
-								$cal->AjaxEnabled = true;
-								$cal->AjaxLoadingImage = $KoolControlsFolder."/KoolAjax/loading/2.gif";
-							 
-								//Init calendar before render
-								$cal->Init();
-							?>
- 
-
-							<div style="padding-top:20px;padding-bottom:40px;width:650px;<?php if ($style_select=="black") echo "background:#333"; ?>">
-								<?php echo $koolajax->Render();?>
-								<?php echo $cal->Render();?>
-							</div>
+						<td width="80%" COLSPAN="2">
+							<input type="submit" name="enviar" value="Terminar formulario" class="cajasRegistro">
 						</td>
 					</tr>
-
-
-					<tr>
-						<td>
-							<p id="textomedio">Barrio:</p>
-						</td>
-						<td>
-							<input type="text" name="Barrio" placeholder="Barrio">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p id="textomedio">Teléfono:</p>
-						</td>
-						<td>
-							<input type="text" name="Teléfono" placeholder="Teléfono">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p id="textomedio">Celular:</p>
-						</td>
-						<td>
-							<input type="text" name="Celular" placeholder="Celular">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p id="textomedio">Correo electronico:</p>
-						</td>
-						<td>
-							<input type="text" name="Correo electronico" placeholder="Correo electronico">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p id="textomedio">Nivel educativo:</p>
-						</td>
-						<td>
-							<input type="text" name="Nivel educativo" placeholder="Nivel educativo">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p id="textomedio">Foto:</p>
-						</td>
-						<td>
-							<input type="file" name="Foto" value="Foto">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" align="center">
-							<input type="submit" value="Submit">
-						</td>
-					</tr>
+					
+	
 					</form>
 				</table>
 			</td>
