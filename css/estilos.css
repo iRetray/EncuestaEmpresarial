@@ -171,6 +171,18 @@ padding: 15px;
 	border-radius: 5px;
 }
 
+.cajasRegistro4 {
+	margin-top: 10px;
+	padding: 15px;
+	width: 70%;
+	font-size: 15px;
+	font-family: 'Raleway', sans-serif;
+	border: 2px solid #0C8D00;
+	border-radius: 5px;
+	background-color: #0C8D00;
+	color: white;
+}
+
 .cajasRegistro1 {
 	padding: 15px;
 	width: 70%;

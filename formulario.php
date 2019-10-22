@@ -65,11 +65,17 @@
 						<td width="70%">
 							<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 							<script>tinymce.init({ selector:'textarea' });</script>
-							<textarea></textarea>
+							<textarea id="textarea"></textarea>
 						</td>
 					</tr>
 
-					
+					<tr width="100%" align="center">
+						<td width="30%">	
+							<p class="textoNormal1">Cuentanos tu experiencia en la empresa:</p>
+						</td>
+						<td width="70%">
+						</td>
+					</tr>
 
 					<tr width="100%" align="center">
 						<td width="30%">
@@ -344,7 +350,7 @@
 
 					<tr width="100%" align="center">
 						<td width="80%" COLSPAN="2">
-							<input type="submit" name="enviar" value="Terminar formulario" class="cajasRegistro">
+							<input type="submit" name="enviar" value="Terminar formulario" class="cajasRegistro4">
 						</td>
 					</tr>
 					
