@@ -21,7 +21,7 @@
 				<p class="textoNormal1">Completa los siguientes campos:</p>
 			</td>
 		</tr>
-
+		<form method="post" id="formularioGen">
 		<tr>
 			<td>
 				<table width="60%" align="center">
@@ -35,12 +35,18 @@
 						</td>
 					</tr>
 
+					
+
 					<tr width="100%" align="center">
 						<td width="30%">	
-							<p class="textoNormal1">Nombre:</p>
+							<p class="textoNormal1">Tipo de documento:</p>
 						</td>
 						<td width="70%">
-							<input type="text" name="Nombre" placeholder="Nombre" class="cajasRegistro">
+							<select name="tipo" class="cajasRegistro" form="formularioGen">
+								<option value="cedula" class="cajasRegistro">Cedula de ciudadania</option>
+								<option value="tarjeta" class="cajasRegistro">Tarjeta de identidad</option>
+								<option value="extranjera" class="cajasRegistro">Cedula de extranjeria</option>
+							</select>
 						</td>
 					</tr>
 
@@ -145,7 +151,7 @@
 							<input type="submit" value="Submit">
 						</td>
 					</tr>
-					
+					</form>
 				</table>
 			</td>
 		</tr>
